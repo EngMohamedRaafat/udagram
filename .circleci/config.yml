@@ -6,33 +6,35 @@ orbs:
   # different jobs are calles later in the workflows sections
 jobs:
   frontend:
-    docker:
-      # the base image can run most needed actions with orbs
-      - image: "cimg/base:stable"
+    working_directory: ~/app/udagram-frontend
+    executor: node/default
     steps:
-      - node/install
-      - checkout
-      - aws-cli/setup # setting up aws cli
-      # install dependencies in both apps
+      - checkout:
+          path: ~/app
+      - node/install-packages:
+          app-dir: ~/app/udagram-frontend
       - run:
-          name: Install App Dependencies
-          command: |
-            npm run frontend:install
+          name: Build Frontend
+          command: npm run build-prod
+      - aws-cli/install
+      # - run:
+      #     name: Deploy Frontend
+      #     command: aws s3 cp --recursive --acl public-read ./www $S3_BUCKET_FRONTEND
       # test frontend app
       # - run:
       #     name: Test App
       #     command: |
-      #       npm run frontend:test
+      #       npm run test
       # build frontend app code
-      - run:
-          name: Build App
-          command: |
-            npm run frontend:build
+      # - run:
+      #     name: Build App
+      #     command: |
+      #       npm run build-prod
       # deploy frontend app code
       - run:
           name: Deploy App
           command: |
-            npm run frontend:deploy
+            npm run deploy
 workflows:
   build_and_deploy:
     jobs:
