@@ -21,7 +21,7 @@ The application server is deployed on AWS Elastic Beanstalk service. AWS Elastic
 **Elastic Beanstalk URL:**
 
 ```url
-http://udagram-api-env.eba-wvf3wg22.us-east-1.elasticbeanstalk.com/
+http://udagram-api-env.eba-nzqpkdtt.us-east-1.elasticbeanstalk.com/
 ```
 
 ### Simple Storage Service (S3)
