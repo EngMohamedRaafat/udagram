@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/EngMohamedRaafat/udagram.svg?style=svg)](https://circleci.com/gh/EngMohamedRaafat/udagram)
+![CircleCI](https://img.shields.io/circleci/build/github/EngMohamedRaafat/udagram/main)
+
 # Udagram
 
 This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
@@ -10,21 +13,6 @@ This application is provided to you as an alternative starter project if you do 
 1. follow the instructions in the installation step
 
 The project can run but is missing some information to connect to the database and storage service. These will be setup during the course of the project
-
-### Dependencies
-
-```
-- Node v14.15.1 (LTS) or more recent. While older versions can work it is advisable to keep node to latest LTS version
-
-- npm 6.14.8 (LTS) or more recent, Yarn can work but was not tested for this project
-
-- AWS CLI v2, v1 can work but was not tested for this project
-
-- A RDS database running Postgres.
-
-- A S3 bucket for hosting uploaded pictures.
-
-```
 
 ### Installation
 
@@ -59,7 +47,3 @@ The e2e tests are using Protractor and Jasmine.
 - [Angular](https://angular.io/) - Single Page Application Framework
 - [Node](https://nodejs.org) - Javascript Runtime
 - [Express](https://expressjs.com/) - Javascript API Framework
-
-## License
-
-[License](LICENSE.txt)
