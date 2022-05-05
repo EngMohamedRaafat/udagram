@@ -20,7 +20,7 @@ jobs:
           name: Backend Install Dependencies
           command: |
             npm run backend:install
-      # build frontend app code
+      # build backend app code
       - run:
           name: Backend Build App
           command: |
